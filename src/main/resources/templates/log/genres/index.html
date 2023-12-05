@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<ul class="nav">
+    <li class="nav-item"><a class="nav-link" href="/log/books/index">All Books</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/books/add">Add Book</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/index">All Genres</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/add">Add New Genres</a></li>
+</ul>
+<body class="container">
+<h1 th:text="${title}">Reading Log</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+    </tr>
+    </thead>
+    <tr th:each="genre : ${genres}">
+        <td><a th:text="${genre.name}"></a></td>
+    </tr>
+</table>
+
+</body>
+</html>

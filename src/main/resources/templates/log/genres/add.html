@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<ul class="nav">
+    <li class="nav-item"><a class="nav-link" href="/log/books/index">All Books</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/books/add">Add Book</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/index">All Genres</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/add">Add New Genres</a></li>
+</ul>
+
+<body class="container">
+
+<form method="post">
+    <div class="form-group">
+        <label>New Genre
+            <input th:field="${genre.name}" class="form-control">
+        </label>
+    </div>
+    <input type="submit" value="Create" class="btn btn-primary">
+</form>
+
+</body>
+</html>

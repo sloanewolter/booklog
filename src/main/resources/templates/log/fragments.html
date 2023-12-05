@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<body>
+
+<header th:fragment="header">
+    <h1 th:text="${title}">Reading Log</h1>
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="log/books/index">All Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="log/books/add">Add Book</a></li>
+        <li class="nav-item"><a class="nav-link" href="log/genres/index">All Genres</a></li>
+        <li class="nav-item"><a class="nav-link" href="log/genres/add">Add New Genres</a></li>
+    </ul>
+</header>
+
+</body>
+</html>

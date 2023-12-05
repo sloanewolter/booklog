@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<h1 th:text="${title}">Reading Log</h1>
+<ul class="nav">
+    <li class="nav-item"><a class="nav-link" href="/log/books/index">All Books</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/books/add">Add Book</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/index">All Genres</a></li>
+    <li class="nav-item"><a class="nav-link" href="/log/genres/add">Add New Genres</a></li>
+</ul>
+
+<body class="container">
+
+<form method="post">
+    <div class="form-group">
+        <label>Title
+            <input th:field="${book.title}" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Author
+            <input th:field="${book.author}" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Rating
+            <input th:field="${book.rating}" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Genre
+            <select th:field="${book.genre}">
+                <option th:each="genre : ${genres}"
+                        th:value="${genre.id}"
+                        th:text="${genre.name}"
+                ></option>
+            </select>
+            <a href="/log/genres/add">Add Genres</a>
+            <a href="/log/genres/index">See All Genres</a>
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
+
+</body>
+</html>
