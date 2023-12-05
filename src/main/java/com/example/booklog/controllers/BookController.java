@@ -41,7 +41,7 @@ public class BookController {
                                          Errors errors, Model model) {
 
         bookRepository.save(newBook);
-        return "/log/books/index";
+        return "redirect:/log/books/index";
     }
 
     //Add capacity to delete and edit books

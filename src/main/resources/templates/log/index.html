@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<h1 th:text="${title}">Reading Log</h1>
+
 <ul class="nav">
     <li class="nav-item"><a class="nav-link" href="books/index">All Books</a></li>
     <li class="nav-item"><a class="nav-link" href="books/add">Add Book</a></li>
@@ -9,7 +9,7 @@
 </ul>
 
 <body class="container">
-
+<h1 th:text="${title}">Reading Log</h1>
 <h1>Welcome, reader!</h1>
 <p>You've come to the right place! We hope to help motivate you to read more and provide an easy way to store the books you've read!</p>
 <p>Want to add a new book? <a href="/log/books/add">Add one here.</a></p>

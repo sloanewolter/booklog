@@ -11,11 +11,6 @@
 <h1 th:text="${title}">Reading Log</h1>
 
 <table class="table table-striped">
-    <thead>
-    <tr>
-        <th>All Books</th>
-    </tr>
-    </thead>
     <tr th:each="book : ${books}">
         <td><a th:text="${book.title}"></a></td>
     </tr>
